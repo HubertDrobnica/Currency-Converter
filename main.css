@@ -1,0 +1,208 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #505562;
+
+}
+
+.container {
+  width: 500px;
+  margin: 20px auto;
+  background-color: #222;
+  user-select: none;
+  position: relative;
+}
+
+.header {
+  background-color: #2d2c37;
+  padding: 2rem 0.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.data {
+  padding: 0.75rem 2.75rem;
+  text-align: end;
+  font-size: 0.75rem;
+}
+
+.currencies {
+  height: calc(100vh - 186px - 40px );
+  overflow-y: scroll;
+}
+
+.currency:first-child {
+  margin: auto;
+  background-color: rgb(30, 75, 117);
+}
+
+.currency {
+  list-style-type: none;
+  vertical-align: top;
+  display: flex;
+  width: 90%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background-color: #2d2d37;
+  border-radius: 5px;
+  position: relative;
+  /* display: none; */
+}
+
+.currencies::-webkit-scrollbar, .add-currency-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.currencies::-webkit-scrollbar-thumb{
+  background-color: #3a3a46;
+}
+
+.add-currency-list::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+}
+
+.info {
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flag {
+  width: 60px;
+  height: 40px;
+  border: 1px solid #fff;
+}
+
+
+
+.info span {
+  font-size: 1.5rem;
+  margin: 5px 10px 0 10px;
+}
+
+input {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 7px 10px;
+  width: 270px;
+  border: 2px solid #f4f4f4;
+  font-size: 1.25rem;
+  color: #eee;
+  outline: none;
+}
+
+.currency-name {
+  margin: 10px 0 8px 0;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.base-currency-rate{
+  font-size: 0.75rem;
+  
+}
+
+.close{
+  position: absolute;
+  right: 0;
+  top:0;
+  padding: 0.35rem 0.5rem 0 0;
+  font-size: 0.6rem;
+  font-weight: bolder;
+  cursor: pointer;
+  color: #666;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+button {
+  background-color: #00b386;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  transition: background-color 0.1s;
+}
+
+
+/*    2nd page     */
+
+
+.add-currency-list {
+  position: absolute;
+  top: 103px;
+  background-color: #f1f1f1;
+  color: #333;
+  list-style-type: none;
+  width: 100%;
+  height: 0;
+  overflow-y: scroll;
+  transition: height 0.2s;
+}
+
+.add-currency-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.add-currency-list li{
+  border-bottom: 1px solid #ddd; 
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-currency-list .flag {
+  width: 3rem;
+  height: 2rem;
+}
+
+.add-currency-list li span {
+  margin-left: 20px;
+}
+
+
+/*    Javascript     */
+
+.open {
+  height: calc(100vh - 40px - 146px);
+}
+
+.change-color-button {
+  background-color: rgb(241, 92, 66);
+}
+
+.disabled {
+  opacity: 0.7;
+  cursor: not-allowed !important;
+}
+
+/* 
+
+currencyList.insertAdjacentHTML('beforeend', 
+    `<li class="currency">
+      <div class="info">
+        <img class="flag" src=${currency.flagURL} alt="">
+        <span>${currency.symbol}</span>
+        <div>
+         <input placeholder="0.0000">
+         <p class="currency-name">${currency.name}</p>
+         <p class="base-currency-rate">1USD - ${currency.rate}${currency.entity}</p>
+         <p class="close">X</p>
+       </div>
+      </div>
+    </li>`)
+
+*/
