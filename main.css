@@ -189,20 +189,3 @@ button {
   cursor: not-allowed !important;
 }
 
-/* 
-
-currencyList.insertAdjacentHTML('beforeend', 
-    `<li class="currency">
-      <div class="info">
-        <img class="flag" src=${currency.flagURL} alt="">
-        <span>${currency.symbol}</span>
-        <div>
-         <input placeholder="0.0000">
-         <p class="currency-name">${currency.name}</p>
-         <p class="base-currency-rate">1USD - ${currency.rate}${currency.entity}</p>
-         <p class="close">X</p>
-       </div>
-      </div>
-    </li>`)
-
-*/

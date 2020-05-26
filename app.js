@@ -325,4 +325,3 @@ function InsertDataIntoCurrency(currency) {
 populateAddCurrencyList();
 basePopulateCurrency();
 
-// addCurrencyList.querySelector(`[data-currency=${parentNode}]`).classList.remove('disabled')
